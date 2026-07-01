@@ -1,54 +1,66 @@
-{
-  "tickets": [
+,
     {
-      "ticket": 1,
-      "portugal": "Cristiano Ronaldo",
-      "croatia": "Nikola Moro"
+      "ticket": 11,
+      "portugal": "João Neves",
+      "croatia": "Lovro Majer"
     },
     {
-      "ticket": 2,
-      "portugal": "Matheus Nunes",
-      "croatia": "Luka Modrić"
+      "ticket": 12,
+      "portugal": "Nuno Mendes",
+      "croatia": "Ivan Perišić"
     },
     {
-      "ticket": 3,
-      "portugal": "Bruno Fernandes",
-      "croatia": "Martin Erlić"
+      "ticket": 13,
+      "portugal": "Francisco Conceição",
+      "croatia": "Petar Sučić"
     },
     {
-      "ticket": 4,
+      "ticket": 14,
+      "portugal": "Rúben Dias",
+      "croatia": "Ante Budimir"
+    },
+    {
+      "ticket": 15,
+      "portugal": "Gonçalo Ramos",
+      "croatia": "Josip Juranović"
+    },
+    {
+      "ticket": 16,
+      "portugal": "João Félix",
+      "croatia": "Marin Baturina"
+    },
+    {
+      "ticket": 17,
+      "portugal": "Rúben Neves",
+      "croatia": "Luka Sučić"
+    },
+    {
+      "ticket": 18,
+      "portugal": "Francisco Trincão",
+      "croatia": "Andrej Kramarić"
+    },
+    {
+      "ticket": 19,
+      "portugal": "Gonçalo Inácio",
+      "croatia": "Franjo Ivanović"
+    },
+    {
+      "ticket": 20,
+      "portugal": "Nélson Semedo",
+      "croatia": "Borna Sosa"
+    },
+    {
+      "ticket": 21,
       "portugal": "Tomás Araújo",
-      "croatia": "Joško Gvardiol"
+      "croatia": "Kristijan Jakić"
     },
     {
-      "ticket": 5,
-      "portugal": "Bernardo Silva",
-      "croatia": "Toni Fruk"
+      "ticket": 22,
+      "portugal": "Samu Costa",
+      "croatia": "Josip Stanišić"
     },
     {
-      "ticket": 6,
-      "portugal": "Renato Veiga",
-      "croatia": "Mateo Kovačić"
-    },
-    {
-      "ticket": 7,
-      "portugal": "Rafael Leão",
-      "croatia": "Marin Pongračić"
-    },
-    {
-      "ticket": 8,
-      "portugal": "Diogo Dalot",
-      "croatia": "Mario Pašalić"
-    },
-    {
-      "ticket": 9,
-      "portugal": "Vitinha",
-      "croatia": "Igor Matanović"
-    },
-    {
-      "ticket": 10,
-      "portugal": "Pedro Neto",
-      "croatia": "Josip Šutalo"
+      "ticket": 23,
+      "portugal": "Gonçalo Guedes",
+      "croatia": "Luka Vušković"
     }
-  ]
-}
