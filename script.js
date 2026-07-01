@@ -1,4 +1,5 @@
 import { db, doc, setDoc } from "./firebase.js";
+
 const ticketsDiv = document.getElementById("tickets");
 const revealBtn = document.getElementById("revealBtn");
 const revealInput = document.getElementById("revealCode");
@@ -7,12 +8,10 @@ const REVEAL_CODE = "LAST DANCE";
 
 let players = [];
 
-// Load players.json
 async function loadPlayers() {
     const response = await fetch("players.json");
     const data = await response.json();
     players = data.tickets;
-
     createTickets();
 }
 
@@ -30,14 +29,11 @@ function createTickets() {
             <h3>🎟 Ticket ${ticket.ticket}</h3>
 
             <div class="player portugal">🇵🇹 ?????</div>
-
             <div class="player croatia">🇭🇷 ?????</div>
 
             <div class="status">🟢 Available</div>
 
-            <input
-                type="text"
-                placeholder="Enter Buyer Name">
+            <input type="text" placeholder="Enter Buyer Name">
 
             <img src="qr.png" alt="QR Code">
 
@@ -45,15 +41,36 @@ function createTickets() {
         `;
 
         ticketsDiv.appendChild(card);
-const button = card.querySelector("button");
-const input = card.querySelector("input");
-const status = card.querySelector(".status");
 
-button.addEventListener("click", () => {
-    alert("Button works!");
-});
+        const button = card.querySelector("button");
+        const input = card.querySelector("input");
+        const status = card.querySelector(".status");
+
+        button.addEventListener("click", async () => {
+
+            const buyer = input.value.trim();
+
+            if (buyer === "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            await setDoc(doc(db, "tickets", String(ticket.ticket)), {
+                buyer: buyer,
+                status: "Pending"
+            });
+
+            status.textContent = "🟡 Pending";
+            alert("Ticket booked successfully!");
+
+        });
+
+    });
+
+}
 
 loadPlayers();
+
 revealBtn.addEventListener("click", () => {
 
     if (revealInput.value.trim() !== REVEAL_CODE) {
@@ -65,10 +82,8 @@ revealBtn.addEventListener("click", () => {
     const croatia = document.querySelectorAll(".croatia");
 
     players.forEach((ticket, index) => {
-
         portugal[index].textContent = "🇵🇹 " + ticket.portugal;
         croatia[index].textContent = "🇭🇷 " + ticket.croatia;
-
     });
 
 });
