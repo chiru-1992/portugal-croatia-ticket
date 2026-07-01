@@ -1,6 +1,4 @@
 {
-  "match": "Portugal vs Croatia",
-  "revealCode": "LAST DANCE",
   "tickets": [
     {
       "ticket": 1,
@@ -16,6 +14,41 @@
       "ticket": 3,
       "portugal": "Bruno Fernandes",
       "croatia": "Martin Erlić"
+    },
+    {
+      "ticket": 4,
+      "portugal": "Tomás Araújo",
+      "croatia": "Joško Gvardiol"
+    },
+    {
+      "ticket": 5,
+      "portugal": "Bernardo Silva",
+      "croatia": "Toni Fruk"
+    },
+    {
+      "ticket": 6,
+      "portugal": "Renato Veiga",
+      "croatia": "Mateo Kovačić"
+    },
+    {
+      "ticket": 7,
+      "portugal": "Rafael Leão",
+      "croatia": "Marin Pongračić"
+    },
+    {
+      "ticket": 8,
+      "portugal": "Diogo Dalot",
+      "croatia": "Mario Pašalić"
+    },
+    {
+      "ticket": 9,
+      "portugal": "Vitinha",
+      "croatia": "Igor Matanović"
+    },
+    {
+      "ticket": 10,
+      "portugal": "Pedro Neto",
+      "croatia": "Josip Šutalo"
     }
   ]
 }
