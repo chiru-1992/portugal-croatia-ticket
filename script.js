@@ -50,3 +50,21 @@ function createTickets() {
 }
 
 loadPlayers();
+revealBtn.addEventListener("click", () => {
+
+    if (revealInput.value.trim() !== REVEAL_CODE) {
+        alert("Wrong Reveal Code");
+        return;
+    }
+
+    const portugal = document.querySelectorAll(".portugal");
+    const croatia = document.querySelectorAll(".croatia");
+
+    players.forEach((ticket, index) => {
+
+        portugal[index].textContent = "🇵🇹 " + ticket.portugal;
+        croatia[index].textContent = "🇭🇷 " + ticket.croatia;
+
+    });
+
+});
