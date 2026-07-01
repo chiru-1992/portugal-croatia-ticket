@@ -1,0 +1,21 @@
+{
+  "match": "Portugal vs Croatia",
+  "revealCode": "LAST DANCE",
+  "tickets": [
+    {
+      "ticket": 1,
+      "portugal": "Cristiano Ronaldo",
+      "croatia": "Nikola Moro"
+    },
+    {
+      "ticket": 2,
+      "portugal": "Matheus Nunes",
+      "croatia": "Luka Modrić"
+    },
+    {
+      "ticket": 3,
+      "portugal": "Bruno Fernandes",
+      "croatia": "Martin Erlić"
+    }
+  ]
+}
