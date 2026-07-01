@@ -46,24 +46,19 @@ function createTickets() {
         const input = card.querySelector("input");
         const status = card.querySelector(".status");
 
-        button.addEventListener("click", async () => {
+button.addEventListener("click", () => {
 
-            const buyer = input.value.trim();
+    const buyer = input.value.trim();
 
-            if (buyer === "") {
-                alert("Please enter your name");
-                return;
-            }
+    if (buyer === "") {
+        alert("Please enter your name");
+        return;
+    }
 
-            await setDoc(doc(db, "tickets", String(ticket.ticket)), {
-                buyer: buyer,
-                status: "Pending"
-            });
+    status.textContent = "🟡 Pending";
+    alert("Button is working!");
 
-            status.textContent = "🟡 Pending";
-            alert("Ticket booked successfully!");
-
-        });
+});        
 
     });
 
