@@ -1,3 +1,4 @@
+import { db, doc, setDoc } from "./firebase.js";
 const ticketsDiv = document.getElementById("tickets");
 const revealBtn = document.getElementById("revealBtn");
 const revealInput = document.getElementById("revealCode");
@@ -44,7 +45,28 @@ function createTickets() {
         `;
 
         ticketsDiv.appendChild(card);
+const button = card.querySelector("button");
+const input = card.querySelector("input");
+const status = card.querySelector(".status");
 
+button.addEventListener("click", async () => {
+
+    const buyer = input.value.trim();
+
+    if (buyer === "") {
+        alert("Please enter your name.");
+        return;
+    }
+
+    await setDoc(doc(db, "tickets", String(ticket.ticket)), {
+        buyer: buyer,
+        status: "Pending"
+    });
+
+    status.textContent = "🟡 Pending";
+    alert("Ticket booked successfully! Waiting for admin approval.");
+
+});
     });
 
 }
