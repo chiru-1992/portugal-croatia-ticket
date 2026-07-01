@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1 align="center">
+Portugal 🇵🇹 vs Croatia 🇭🇷
+</h1>
+
+<h2 align="center">
+Admin Panel
+</h2>
+
+<div class="reveal-box">
+
+<h3>Admin Login</h3>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Admin Password">
+
+<button id="loginBtn">
+
+Login
+
+</button>
+
+<p id="loginMessage"></p>
+
+</div>
+
+<div
+id="adminArea"
+style="display:none;">
+
+<h2>
+
+Ticket Management
+
+</h2>
+
+<button id="shuffleBtn">
+
+Shuffle Players
+
+</button>
+
+<button id="resetAllBtn">
+
+Reset All Tickets
+
+</button>
+
+<br><br>
+
+<table
+border="1"
+width="100%"
+id="ticketTable">
+
+<thead>
+
+<tr>
+
+<th>Ticket</th>
+
+<th>Buyer</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>
