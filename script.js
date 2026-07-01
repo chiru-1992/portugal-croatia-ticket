@@ -85,5 +85,3 @@ revealBtn.addEventListener("click", () => {
         portugal[index].textContent = "🇵🇹 " + ticket.portugal;
         croatia[index].textContent = "🇭🇷 " + ticket.croatia;
     });
-
-});
