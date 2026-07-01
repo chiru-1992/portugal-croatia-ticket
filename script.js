@@ -1,38 +1,31 @@
-const ticketsDiv = document.getElementById("tickets");
+// Load players from players.json
+let playerData = [];
 
-const revealBtn = document.getElementById("revealBtn");
-const revealInput = document.getElementById("revealCode");
+fetch("players.json")
+  .then(response => response.json())
+  .then(data => {
+    playerData = data.tickets;
+  });
 
-const REVEAL_CODE = "LAST DANCE";
+// Reveal players
+revealBtn.addEventListener("click", () => {
 
-let revealPlayers = false;
+    if (revealInput.value.trim() !== REVEAL_CODE) {
+        alert("Wrong Reveal Code");
+        return;
+    }
 
-// Create 23 tickets
-for (let i = 1; i <= 23; i++) {
+    const portugal = document.querySelectorAll(".portugal");
+    const croatia = document.querySelectorAll(".croatia");
 
-    const card = document.createElement("div");
-    card.className = "ticket";
+    playerData.forEach((ticket, index) => {
 
-    card.innerHTML = `
-        <h3>🎟 Ticket ${i}</h3>
+        if (portugal[index])
+            portugal[index].textContent = "🇵🇹 " + ticket.portugal;
 
-        <div class="player portugal">🇵🇹 ?????</div>
+        if (croatia[index])
+            croatia[index].textContent = "🇭🇷 " + ticket.croatia;
 
-        <div class="player croatia">🇭🇷 ?????</div>
+    });
 
-        <div class="status">🟢 Available</div>
-
-        <input
-            type="text"
-            placeholder="Enter Buyer Name">
-
-        <img src="qr.png" alt="QR Code">
-
-        <button>
-            Buy Ticket
-        </button>
-    `;
-
-    ticketsDiv.appendChild(card);
-
-}
+});
