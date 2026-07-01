@@ -154,3 +154,80 @@ resetAllBtn.onclick = async ()=>{
     alert("All tickets reset.");
 
 };
+// ================================
+// BALANCED PLAYER PAIRS
+// ================================
+
+shuffleBtn.onclick = async () => {
+
+const portugal = [
+
+"Cristiano Ronaldo",
+"Bruno Fernandes",
+"Bernardo Silva",
+"Rafael Leão",
+"Vitinha",
+"Pedro Neto",
+"João Neves",
+"Gonçalo Ramos",
+"Nuno Mendes",
+"João Cancelo",
+"Rúben Dias",
+"Gonçalo Inácio",
+"Diogo Dalot",
+"Francisco Conceição",
+"Francisco Trincão",
+"João Félix",
+"Matheus Nunes",
+"Rúben Neves",
+"Renato Veiga",
+"Tomás Araújo",
+"Gonçalo Guedes",
+"Samu Costa",
+"Nélson Semedo"
+
+];
+
+const croatia = [
+
+"Nikola Moro",
+"Luka Modrić",
+"Martin Erlić",
+"Joško Gvardiol",
+"Toni Fruk",
+"Mateo Kovačić",
+"Marin Pongračić",
+"Mario Pašalić",
+"Igor Matanović",
+"Josip Šutalo",
+"Lovro Majer",
+"Ivan Perišić",
+"Petar Sučić",
+"Ante Budimir",
+"Josip Juranović",
+"Marin Baturina",
+"Luka Sučić",
+"Andrej Kramarić",
+"Franjo Ivanović",
+"Borna Sosa",
+"Kristijan Jakić",
+"Josip Stanišić",
+"Luka Vušković"
+
+];
+
+for(let i=0;i<23;i++){
+
+await updateDoc(doc(db,"tickets",String(i+1)),{
+
+portugal: portugal[i],
+
+croatia: croatia[i]
+
+});
+
+}
+
+alert("Balanced player distribution completed.");
+
+};
