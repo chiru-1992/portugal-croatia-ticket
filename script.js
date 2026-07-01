@@ -1,4 +1,4 @@
-// Load players from players.json
+import { db, doc, setDoc } from "./firebase.js";/ Load players from players.json
 let playerData = [];
 
 fetch("players.json")
