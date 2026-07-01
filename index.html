@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portugal vs Croatia Tickets</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script type="module" src="firebase.js"></script>
+<script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🇵🇹 Portugal vs Croatia 🇭🇷</h1>
+
+<h2>Round of 32</h2>
+
+<div class="price">
+Ticket Price : ₹50
+</div>
+
+</header>
+
+<section class="reveal-box">
+
+<h3>Reveal Players</h3>
+
+<input
+type="password"
+id="matchCode"
+placeholder="Enter Match Code">
+
+<button id="revealBtn">
+Reveal
+</button>
+
+<p id="message"></p>
+
+</section>
+
+<section id="tickets">
+
+<!-- JavaScript will automatically create
+all 23 tickets here -->
+
+</section>
+
+<!-- PAYMENT MODAL -->
+
+<div id="paymentModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Complete Payment</h2>
+
+<p>
+Enter your name and pay using the QR below.
+</p>
+
+<input
+type="text"
+id="buyerName"
+placeholder="Your Name">
+
+<img
+src="qr.png"
+class="qr"
+alt="QR Code">
+
+<button id="paidBtn">
+Payment Done
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+Powered by Firebase +
+GitHub Pages
+
+</p>
+
+</footer>
+
+</body>
+</html>
