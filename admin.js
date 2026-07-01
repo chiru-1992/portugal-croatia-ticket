@@ -98,3 +98,59 @@ Reset
     });
 
 }
+// ======================
+// APPROVE TICKET
+// ======================
+
+window.approve = async function(ticketId){
+
+    await updateDoc(doc(db,"tickets",ticketId),{
+
+        status:"Sold"
+
+    });
+
+    alert("Ticket marked as SOLD");
+
+};
+
+// ======================
+// RESET ONE TICKET
+// ======================
+
+window.resetTicket = async function(ticketId){
+
+    await setDoc(doc(db,"tickets",ticketId),{
+
+        buyer:"",
+        status:"Available"
+
+    });
+
+    alert("Ticket Reset");
+
+};
+
+// ======================
+// RESET ALL TICKETS
+// ======================
+
+resetAllBtn.onclick = async ()=>{
+
+    if(!confirm("Reset all 23 tickets?"))
+        return;
+
+    for(let i=1;i<=23;i++){
+
+        await setDoc(doc(db,"tickets",String(i)),{
+
+            buyer:"",
+            status:"Available"
+
+        });
+
+    }
+
+    alert("All tickets reset.");
+
+};
